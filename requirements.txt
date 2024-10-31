@@ -1,9 +1,7 @@
 streamlit
 python-dotenv
 langchain
-crewai
 streamlit-mermaid
-chromadb
 openai
 
 # Utilities
@@ -11,3 +9,5 @@ pathlib
 
 # Add any version-specific dependencies as needed
 langchain-openai
+
+crewai
