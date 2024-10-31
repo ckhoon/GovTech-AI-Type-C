@@ -1,6 +1,10 @@
 import streamlit as st
 from streamlit_mermaid import st_mermaid
 
+if not st.session_state.authenticated:
+    st.info('Please Login from the Home page and try again.')
+    st.stop()
+
 st.title("Methodology 📚")
 st.markdown("""
 ## Technical Implementation

@@ -1,4 +1,9 @@
 import streamlit as st
+
+if not st.session_state.authenticated:
+    st.info('Please Login from the Home page and try again.')
+    st.stop()
+
 from utils.vector_store import initialize_vectorstore
 from utils.intent_classifier import create_intent_classification_crew
 from utils.chat_chain import create_chat_chain

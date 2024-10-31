@@ -1,5 +1,9 @@
 import streamlit as st
 
+if not st.session_state.authenticated:
+    st.info('Please Login from the Home page and try again.')
+    st.stop()
+
 st.title("About Us ℹ️")
 
 st.markdown("""
