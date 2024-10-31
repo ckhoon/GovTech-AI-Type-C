@@ -1,6 +1,15 @@
-python-dotenv
-openai
-tiktoken
 streamlit
-chromadb 
+python-dotenv
+langchain
 crewai
+streamlit-mermaid
+chroma-langchain
+openai
+
+# Utilities
+pathlib
+os
+json
+
+# Add any version-specific dependencies as needed
+langchain-openai
