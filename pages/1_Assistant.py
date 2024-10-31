@@ -56,7 +56,13 @@ if user_question:
     # Classify user intent
     with st.spinner("Analyzing your question..."):
         user_type = classify_intent(user_question)
-        st.info(f"Query classified as: {'CET Course Query' if user_type == 'adult_learner' else 'Industry Partnership Query'}")
+        if user_type == 'adult_learner':
+            query_type = 'CET Course Query'
+        elif user_type == 'industrial_partner':
+            query_type = 'Industry Partnership Query'
+        else:
+            query_type = 'General Query'
+        st.info(f"Query classified as: {query_type}")
     
     chain = create_chat_chain(st.session_state.vector_store, user_type)
     
