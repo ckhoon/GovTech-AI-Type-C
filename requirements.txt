@@ -3,7 +3,7 @@ python-dotenv
 langchain
 crewai
 streamlit-mermaid
-chromadb
+chroma-langchain
 openai
 
 # Utilities
