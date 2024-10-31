@@ -8,7 +8,6 @@ openai
 
 # Utilities
 pathlib
-os
 json
 
 # Add any version-specific dependencies as needed
