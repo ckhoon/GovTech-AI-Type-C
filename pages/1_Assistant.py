@@ -1,7 +1,7 @@
 import streamlit as st
 from utils.vector_store import initialize_vectorstore
 from utils.intent_classifier import create_intent_classification_crew
-from backup.chat_chain import create_chat_chain
+from utils.chat_chain import create_chat_chain
 
 # Initialize session states
 if 'chat_history' not in st.session_state:
@@ -57,16 +57,16 @@ if user_question:
     
     with st.spinner("Generating response..."):
         response = chain.invoke({
-            "question": user_question,
+            "input": user_question,
             "chat_history": st.session_state.chat_history
         })
         
-        st.session_state.chat_history.append((user_question, response["answer"]))
+        st.session_state.chat_history.append((user_question, response["answer"], response.get('context', [])))
 
     st.session_state.user_question = ""
 
 # Display chat history
-for question, answer in st.session_state.chat_history:
+for question, answer , source in st.session_state.chat_history:
     st.write("🙋 You:", question)
     st.write("🤖 Assistant:", answer)
     st.write("---")
