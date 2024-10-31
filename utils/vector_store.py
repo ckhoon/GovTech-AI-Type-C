@@ -4,7 +4,7 @@ from typing import List, Dict
 import json
 import streamlit as st
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_chroma import Chroma
+from langchain.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 
 def load_json_files(directory_path: str) -> List[Dict]:
