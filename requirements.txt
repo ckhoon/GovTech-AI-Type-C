@@ -11,3 +11,4 @@ pathlib
 langchain-openai
 
 crewai
+pysqlite3-binary
