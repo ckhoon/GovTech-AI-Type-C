@@ -8,7 +8,6 @@ openai
 
 # Utilities
 pathlib
-json
 
 # Add any version-specific dependencies as needed
 langchain-openai
